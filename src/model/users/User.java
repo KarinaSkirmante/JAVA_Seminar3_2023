@@ -1,6 +1,6 @@
 package model.users;
 
-public abstract class User {
+public abstract class User  extends GuestUser{
 	private String username;
 	private String encodedPassword;
 	private String name;//for Business User it will be name of owner
@@ -48,6 +48,26 @@ public abstract class User {
 		this.surname = surname;
 	}
 	
+	public User() {
+		super();
+		setUsername("default.user");
+		setEncodedPassword("defaultpassword");
+		setName("Defaultname");
+		setSurname("Defaultsurname");
+	}
+	
+	public User(String name, String surname, String username, String password) {
+		super();
+		setName(name);
+		setSurname(surname);
+		setUsername(username);
+		setEncodedPassword(password);
+	}
+	
+	
+	public String toString() {
+		return "RU No." + getGeneratedId() + ": " + name + " " + surname + ", " + username;
+	}
 	
 
 }

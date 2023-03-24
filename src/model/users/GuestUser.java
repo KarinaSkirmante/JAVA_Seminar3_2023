@@ -16,7 +16,7 @@ public class GuestUser {
 	}
 		
 	public String toString() {
-		return "Guest User Nr." + generatedId;
+		return "GU No." + generatedId;
 	}
 	
 	//TODO add find fuctions

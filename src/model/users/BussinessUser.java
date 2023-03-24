@@ -8,19 +8,6 @@ import model.PostType;
 
 public class BussinessUser extends User{
 
-	public boolean isFull() {
-		try
-		{
-			Post post = new Post();
-			return false;
-		}
-		catch (OutOfMemoryError exp) {
-			return true;
-		}
-	}
-	
-	
-	
 	private ArrayList<Page> allPages = new ArrayList<>();
 	
 	public ArrayList<Page> getAllPages() {

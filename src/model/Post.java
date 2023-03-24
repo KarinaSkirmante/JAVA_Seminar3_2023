@@ -1,13 +1,14 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Post {
 	//1. variables
 	private String msg;
 	private LocalDateTime dateTime;
 	//TODO need to change to Arraylist of User, which set the like to this post
-	private int countOfLikes;
+	private int countOfLikes = 0;
 	
 	//2.getters and setters
 	public String getMsg() {
@@ -35,9 +36,20 @@ public class Post {
 		countOfLikes++;
 	}
 	
-
-	
 	//3. constructors
+	public Post() {
+		setDateTime();
+		setMsg("Test msg");
+	}
+	
+	public Post(String msg) {
+		setMsg(msg);
+	}
 	
 	//4. toString
+	//24/03/2023 13:57:23 -> mana ziņa (3)
+	public String toString() {
+		return dateTime.format(DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm:ss"))
+				+ " -> " + msg + " (" + countOfLikes + ")";
+	}
 }

@@ -71,15 +71,20 @@ public class Page {
 			postsInPage.remove(post);
 		}
 	}
-	
-	
-	
-	
-	
-	
 	//constructors
+	public Page() {
+		setTitle("--TITLE--");
+		setDescription("--DESCRIPTION--");
+	}
+	public Page(String title, String description) {
+		setTitle(title);
+		setDescription(description);
+	}
+	
 	
 	//toString
-	
+	public String toString() {
+		return title + "( "+description + ") -->" + postsInPage + "--> " + followers.size();
+	}
 	
 }

@@ -30,7 +30,13 @@ public class PrivateUser extends User{
 		}
 		return post;
 	}
+	
+	public PrivateUser(String name, String surname, String username, String password) {
+		super(name, surname, username, password);
+	}
 
+	
+	
 	//TODO add functions 1) addFollower and 2) removeFollower 3) toString
 	
 }

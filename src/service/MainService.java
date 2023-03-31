@@ -47,13 +47,7 @@ public class MainService {
 		u4.createPost(new Post("Man šodien jāiet pie ārsta!"), PostType.privatePost);
 		
 		
-		for(Post temp: u3.getAllPrivatePosts()) {
-			System.out.println(temp);
-		}
 		
-		for(Post temp: u4.getAllPrivatePosts()) {
-			System.out.println(temp);
-		}
 		
 		//5. create page for private user --> it is not allowed in our system
 		//u4.addPage();
@@ -70,10 +64,7 @@ public class MainService {
 		u5.createPostInPage(p2, u5.createPost(new Post("Liepājas svētkos 25% atlaide tulpēm"), PostType.publicPost));
 		u5.createPostInPage(p1, u5.createPost(new Post("31.03.2023 narcises par brīvu!"), PostType.publicPost));
 		
-		System.out.println("--------------------------");
-		for(Post temp: u5.getAllPages().get(0).getPostsInPage()) {
-			System.out.println(temp);
-		}
+		
 		
 		//8. verify login func.
 		BussinessUser u7 = new BussinessUser("SIA", "VeA", "sia.vea", "987");
@@ -94,10 +85,30 @@ public class MainService {
 			System.out.println(e);
 		}
 		
-		//10. verify addFollower func. for Private User object
-		//11. verify removeFollower func. for Private User object
+		//TODO 10. verify addFollower func. for Private User object
+		
+		
+		//TODO 11. verify removeFollower func. for Private User object
 		//12. verify increaseLikes func. for Post object
-
+		for(int i  = 0; i < 6; i++) {
+			u3.getAllPrivatePosts().get(0).increaseLikes();
+		}
+		for(int i  = 0; i < 10; i++) {
+			u5.getAllPages().get(0).getPostsInPage().get(0).increaseLikes();
+		}
+		
+		for(Post temp: u3.getAllPrivatePosts()) {
+			System.out.println(temp);
+		}
+		
+		for(Post temp: u4.getAllPrivatePosts()) {
+			System.out.println(temp);
+		}
+		
+		System.out.println("--------------------------");
+		for(Post temp: u5.getAllPages().get(0).getPostsInPage()) {
+			System.out.println(temp);
+		}
 	}
 
 }

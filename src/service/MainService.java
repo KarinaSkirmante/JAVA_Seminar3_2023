@@ -109,6 +109,14 @@ public class MainService {
 		for(Post temp: u5.getAllPages().get(0).getPostsInPage()) {
 			System.out.println(temp);
 		}
+		System.out.println("--------------------------");
+		System.out.println(u1.findUsersByNameOrSurnameOrUsername("sia"));
+		
+		System.out.println("--------------------------");
+		System.out.println(u3.findPagesByTitleOrDescription("Ventspil"));
+		
+		System.out.println("--------------------------");
+		System.out.println(u4.findPublicPostsInPrivateUserOrInPage("PATĪK"));
 	}
 
 }

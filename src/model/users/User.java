@@ -31,7 +31,7 @@ public abstract class User  extends GuestUser{
 		return encodedPassword;
 	}
 	public void setEncodedPassword(String inputEncodedPassword) {
-		if(inputEncodedPassword != null && inputEncodedPassword.matches("[A-Za-z0-9]{8, 20}")) {
+		if(inputEncodedPassword != null && inputEncodedPassword.matches("[A-Za-z0-9]{3,20}")) {
 			//TODO find out simple password encoder 
 			try {
 				MessageDigest md = MessageDigest.getInstance("MD5");

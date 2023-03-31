@@ -76,10 +76,27 @@ public class MainService {
 		}
 		
 		//8. verify login func.
-		//9. verify followPage func.
-		//10. verify addFollower func.
-		//11. verify removeFollower func.
-		//12. verify increaseLikes func.
+		BussinessUser u7 = new BussinessUser("SIA", "VeA", "sia.vea", "987");
+		System.out.println(u4.login());//true
+		System.out.println(u7.login()); //false
+		//u2.login(); --> it is not possible 
+		
+		//9. verify followPage func. for Page object
+		try
+		{
+			u3.followPage(p1);
+			u4.followPage(p1);
+			u4.followPage(p2);
+			
+			System.out.println(p2);
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		//10. verify addFollower func. for Private User object
+		//11. verify removeFollower func. for Private User object
+		//12. verify increaseLikes func. for Post object
 
 	}
 

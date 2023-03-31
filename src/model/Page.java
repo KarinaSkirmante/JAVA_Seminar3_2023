@@ -84,7 +84,7 @@ public class Page {
 	
 	//toString
 	public String toString() {
-		return title + "( "+description + ") -->" + postsInPage + "--> " + followers.size();
+		return title + "( "+description + ") -->" + postsInPage + "--> Followers:" + followers.size();
 	}
 	
 }
